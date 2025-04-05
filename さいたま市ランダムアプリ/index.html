@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ランダム駅（さいたま市）</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0078D7">
+</head>
+<body>
+  <div class="container">
+    <h1>ランダム駅（さいたま市）</h1>
+    <button onclick="showRandomStation()">駅を出す！</button>
+    <div id="station">ここに駅名が出るよ！</div>
+    <a id="map-link" href="#" target="_blank" style="display:none; margin-top: 20px; display: block; color: #0078D7; text-decoration: underline;"></a>
+  </div>
+
+  <script src="main.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+</body>
+</html>
